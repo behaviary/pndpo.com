@@ -18,11 +18,11 @@ class ShowHide extends React.Component {
   render () {
     return(
       <div>
-        <Button buttonAction={this.click} buttonText="Links"/>
+        
         {
           this.state.childVisible
             ? <Menu items={this.props.items}/>
-            : null
+            : <Button className="button" buttonAction={this.click} buttonText="links"/>
         }
       </div>
     )

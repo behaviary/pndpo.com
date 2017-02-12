@@ -3,12 +3,12 @@ class Menu extends React.Component {
     const items = this.props.items;
 
     const listItems = items.map((item) =>
-        <li class="menu-item">{item}</li>
+        <li className="item"><a href={item.link}>{item.name}</a></li>
     );
 
     return (
-      <div class="menu">
-        <ul>
+      <div className="menu">
+        <ul className="list">
             {listItems}
         </ul>
       
