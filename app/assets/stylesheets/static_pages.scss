@@ -7,6 +7,12 @@
     margin: 0 0 0 0;
 }
 
+// Conventience styles
+.italic {
+    font-style: italic;
+    font-weight: lighter;
+}
+
 // TODO: Componentize the styles into other places
 .home {
     height: 100vh;
@@ -41,20 +47,39 @@
         .name {
             width: 50%;
             text-align: center;
-            .pndpo {
-                color: #777;
-            }
+        }
+        .pndpo {
+            color: #777;
+        }
+        .quote {
+            margin-top: 20px; 
         }
     }
 
 }
 
 .menu {
+    margin-bottom: 20px;
+    margin-top: 30px;
+    height: 18px;
     .list {
         list-style: none;
         .item {
-
+            display: inline-block;
+            padding-right: 15px;
+            cursor: pointer;
         }
+    }
+    
+    // Animation stuff
+    height: 0%;
+    overflow: hidden;
+    -webkit-transition: height 1s ease-in-out;
+    -moz-transition: height 1s ease-in-out;
+    -o-transition: height 1s ease-in-out;
+    transition: height 1s ease-in-out;
+    .show {
+        height:100%;
     }
 }
 

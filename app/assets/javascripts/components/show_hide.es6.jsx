@@ -3,12 +3,14 @@ class ShowHide extends React.Component {
     super(props);
 
     this.state = {
-        childVisible: false
+        childVisible: false,
+        menuClasses: ""
     }
-    this.click=this.click.bind(this);
+    this.click = this.click.bind(this);
   }
 
   click () {
+    this.state.menuClasses = "show";
     this.setState({
         childVisible: 
         !this.state.childVisible
@@ -18,15 +20,13 @@ class ShowHide extends React.Component {
   render () {
     return(
       <div>
-        
         {
           this.state.childVisible
-            ? <Menu items={this.props.items}/>
+            ? <Menu className={this.state.menuClasses} items={this.props.items} toggleMenu={this.click}/>
             : <Button className="button" buttonAction={this.click} buttonText="links"/>
         }
       </div>
     )
   }
-
 }
 

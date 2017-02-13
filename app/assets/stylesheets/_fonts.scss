@@ -1,6 +1,13 @@
 @font-face {
   font-family:'Roboto';
   src:font-url('fonts/roboto_regular_macroman/Roboto-regular-webfont.eot');
-  src:font-url('fonts/roboto_regular_macroman/Roboto-regular-webfont.eot?#iefix') format('embedded-opentype'),
+  src:font-url('fonts/roboto_regular_macroman/Roboto-regular-webfont.eot?#iefix') format('embedded-opentype');
 
+} 
+
+@font-face {
+  font-family:'Roboto';
+  src:font-url('fonts/roboto_thinitalic_macroman/Roboto-Thinitalic-webfont.eot');
+  src:font-url('fonts/roboto_thinitalic_macroman/Roboto-Thinitalic-webfont.eot?#iefix') format('embedded-opentype');
+  font-style: italic;
 } 
