@@ -33,13 +33,14 @@ ul {
 	justify-content: center;
 
 	background: url(asset-path('sunset.jpg')) no-repeat center;
-	background-size: auto 100vh;
+	background-size: cover;
 	
 	.hero-bar {
 		padding: 50px 0;
 
-		background-color: #fff;
+		//background-color: #fff;
 		width: 100vw;
+		height: 87vh;
 
 		display: -webkit-flex;
 		display: flex;
@@ -49,15 +50,18 @@ ul {
 
 		-webkit-align-items: center;
 		align-items: center;
-		-webkit-justify-content: center;
-		justify-content: center;
+
+		-webkit-justify-content: space-around;
+		justify-content: space-between;
 
 		.name {
 			width: 50%;
 			text-align: center;
+			color: white;
 		}
 		.pndpo {
-			color: #777;
+			// color: #777;
+			color: white;
 		}
 		.quote {
 			margin-top: 20px; 
@@ -94,7 +98,7 @@ ul {
 				
 				&.link {
 					text-decoration: none;
-					color: black;
+					color: white;
 				}
 
 				&:hover {
@@ -117,17 +121,17 @@ ul {
 	margin-top: 40px;
 	font-size: 14px;
 	border-radius: 4px;
-	border: 1.5px solid #000;
-	background: #fff;
-	color: #000;
+	border: 1.5px solid white;
+	background: none;
+	color: white;//#000;
 	outline: 0;
 
 	-webkit-transition: background-color 1s ease-in-out;
 	-moz-transition: background-color 1s ease-in-out;
 	-o-transition: background-color 1s ease-in-out;
-	transition: background-color 1s ease-in-out;
+	transition: color 1s ease-in-out;
 	&:hover {
-		background-color: black;
+		color: black;
 	}
 }
 
