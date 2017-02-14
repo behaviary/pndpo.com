@@ -24,7 +24,7 @@
     -webkit-justify-content: center;
     justify-content: center;
 
-    background: url('sunset.jpg') no-repeat center;
+    background: image-url('sunset.jpg') no-repeat center;
     background-size: auto 100vh;
     
     .hero-bar {
@@ -70,7 +70,7 @@
             cursor: pointer;
         }
     }
-    
+
     // Animation stuff
     height: 0%;
     overflow: hidden;
