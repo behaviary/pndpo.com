@@ -2,12 +2,12 @@ class StaticPagesController < ApplicationController
 
     def home
         @items = [
-            {"id": 1, "name": "resume", "link": "#{url_for(action: "resume")}"}, 
-            {"id": 2, "name": "twitter", "link": "https://twitter.com/pdepaulo"}, 
-            {"id": 3, "name": "linkedin", "link": "https://www.linkedin.com/in/peterdepaulo"}, 
-            {"id": 4, "name": "github", "link": "https://github.com/pndpo"},
-            {"id": 5, "name": "blog", "link": "https://pndpo.svbtle.com"},
-            {"id": 6, "name": "gun.io", "link": "https://gun.io/blog/how-to-hire-a-javascript-developer/"}
+            {"id": 1, "name": "resume", "icon": "fa fa-file-text medium-font", "link": "#{url_for(action: "resume")}"}, 
+            {"id": 2, "name": "twitter", "icon": "fa fa-twitter medium-font", "link": "https://twitter.com/pdepaulo"}, 
+            {"id": 3, "name": "linkedin", "icon": "fa fa-linkedin-square medium-font", "link": "https://www.linkedin.com/in/peterdepaulo"}, 
+            {"id": 4, "name": "github", "icon": "fa fa-github medium-font", "link": "https://github.com/pndpo"},
+            {"id": 5, "name": "blog", "icon": "fa fa-rss-square medium-font", "link": "https://pndpo.svbtle.com"},
+            {"id": 6, "name": "gun.io", "icon": "fa fa-hand-o-right medium-font", "link": "https://gun.io/blog/how-to-hire-a-javascript-developer/"}
         ]
     end
 

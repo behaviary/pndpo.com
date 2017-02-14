@@ -13,8 +13,9 @@ gem 'rails', '~> 5.0.1'
 # gem 'sqlite3'
 
 # Postgres for heroku
-gem 'pg', '~> 0.19.0'
-
+group :production do
+  gem 'pg'
+end
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -30,6 +31,9 @@ gem 'jquery-rails'
 
 # Include the react-rails gem for components
 gem 'react-rails'
+
+# Font Awesome gem
+gem "font-awesome-rails"
 
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
@@ -58,6 +62,7 @@ group :development do
   
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'sqlite3'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

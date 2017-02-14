@@ -3,18 +3,35 @@ class ShowHide extends React.Component {
     super(props);
 
     this.state = {
-        childVisible: false,
-        menuClasses: ""
-    }
-    this.click = this.click.bind(this);
+      childVisible: this.checkLocalStorage(),
+      menuClasses: ""
+    };
+
+    this.registerClick = this.registerClick.bind(this);
   }
 
-  click () {
-    this.state.menuClasses = "show";
+  registerClick() {
+    var _childVisible = !this.state.childVisible
+    
     this.setState({
-        childVisible: 
-        !this.state.childVisible
+        childVisible: _childVisible
     });
+
+    this.setLocalStorage('childVisible' ,_childVisible);
+  }
+
+  checkLocalStorage() {
+    var childVisible = JSON.parse(localStorage.getItem('childVisible'));
+
+    if (childVisible == null) {
+      childVisible = false
+    }    
+
+    return childVisible;
+  }
+
+  setLocalStorage(key, value){
+    localStorage.setItem(key, JSON.stringify(value));
   }
 
   render () {
@@ -22,8 +39,8 @@ class ShowHide extends React.Component {
       <div>
         {
           this.state.childVisible
-            ? <Menu className={this.state.menuClasses} items={this.props.items} toggleMenu={this.click}/>
-            : <Button className="button" buttonAction={this.click} buttonText="links"/>
+            ? <Menu className={this.state.menuClasses} items={this.props.items} toggleMenu={this.registerClick}/>
+            : <Button className="button" buttonAction={this.registerClick} buttonText="links"/>
         }
       </div>
     )
