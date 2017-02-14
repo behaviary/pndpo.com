@@ -11,7 +11,7 @@ class ShowHide extends React.Component {
   }
 
   registerClick() {
-    var _childVisible = !this.state.childVisible
+    var _childVisible = !this.state.childVisible;
     
     this.setState({
         childVisible: _childVisible
@@ -24,7 +24,7 @@ class ShowHide extends React.Component {
     var childVisible = JSON.parse(localStorage.getItem('childVisible'));
 
     if (childVisible == null) {
-      childVisible = false
+      childVisible = true;
     }    
 
     return childVisible;
