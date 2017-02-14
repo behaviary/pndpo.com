@@ -24,7 +24,7 @@
     -webkit-justify-content: center;
     justify-content: center;
 
-    background: image-url('sunset.jpg') no-repeat center;
+    background: url(asset-path('sunset.jpg')) no-repeat center;
     background-size: auto 100vh;
     
     .hero-bar {
