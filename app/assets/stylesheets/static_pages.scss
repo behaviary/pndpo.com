@@ -27,18 +27,56 @@ ul {
 
 // TODO: Componentize the styles into other places
 .home {
+	width:100vw;
 	height: 100vh;
-	display: -webkit-flex;
-	display: flex;
 
-	-webkit-align-items: center;
-	align-items: center;
-	-webkit-justify-content: center;
-	justify-content: center;
+	// display: -webkit-flex;
+	// display: flex;
 
-	background: url(asset-path('sunset2.jpg')) no-repeat center;
-	background-size: cover;
+	// -webkit-align-items: center;
+	// align-items: center;
+	// -webkit-justify-content: center;
+	// justify-content: center;
+
+	// background: url(asset-path('sunset2.jpg')) no-repeat center;
+	// background-size: cover;
 	
+	.sunset {
+		position: absolute;
+		z-index: -12;
+
+		width:100vw;
+		height: 100vh;
+		display: -webkit-flex;
+		display: flex;
+
+		flex-direction: column;
+
+		.sun {
+			z-index: 2;
+			position: absolute;
+			width: 200px;
+			height: 200px;
+			border-radius: 100px;
+			background-color: #de8674;
+			align-self: center;
+			top: 40%;
+		}
+
+		.sky {
+			z-index: 1;
+			width: 100%;
+			height: 50%;
+			background-color: #f2eec7;
+		}
+		.ocean {
+			z-index: 3;
+			width: 100%;
+			height: 50%;
+			background-color: rgb(120,209,181);
+		}
+	}
+
 	.hero-bar {
 		padding: 50px 0;
 
@@ -59,15 +97,19 @@ ul {
 		justify-content: space-between;
 
 		.name {
+			margin-top: 80px;
 			width: 50%;
 			text-align: center;
-			color: white;
+			color: rgb(120,209,181);;
 		}
 		.pndpo {
 			font-family: inherit;
 			font-weight: inherit;
 			// color: #777;
-			color: white;
+			color: rgb(120,209,181);
+			&:hover {
+				color: white;
+			}
 		}
 		.quote {
 			margin-top: 20px; 
@@ -108,15 +150,23 @@ ul {
 					color: white;
 				}
 
-				&:hover {
-					color: red;
+				&:not(.close):hover {
+					color: #de8674;
+					margin-top: -10px;
+				}
+				&.close:hover {
+					color:red;
 				}
 				
 				// Animation stuff
-				-webkit-transition: color 0.2s ease-in-out;
-				-moz-transition: color 0.2s ease-in-out;
-				-o-transition: color 0.2s ease-in-out;
-				transition: color 0.2s ease-in-out;
+				-webkit-transition: color 0.4s ease-in-out;
+				-moz-transition: color 0.4s ease-in-out;
+				-o-transition: color 0.4s ease-in-out;
+				transition: color 0.4s ease-in-out;
+
+				transition: margin-top 0.3s ease-in-out;
+
+
 			}
 		}
 	}

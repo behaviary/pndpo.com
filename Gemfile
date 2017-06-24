@@ -31,6 +31,7 @@ gem 'jquery-rails'
 
 # Include the react-rails gem for components
 gem 'react-rails'
+gem 'react-rails-hot-loader'
 
 # Font Awesome gem
 gem "font-awesome-rails"

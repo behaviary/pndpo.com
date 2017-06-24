@@ -16,7 +16,7 @@ class Menu extends React.Component {
         <ul className="list">
             {listItems}
             <li className="item" onClick={this.props.toggleMenu}>
-                <span className="container link"><i className="fa fa-times"></i></span>
+                <span className="container link close"><i className="fa fa-times"></i></span>
             </li>
         </ul>
       

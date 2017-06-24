@@ -1,0 +1,1 @@
+React::Rails::HotLoader::AssetChangeSet.asset_glob = "**/*.{css,scss,js}*" 
